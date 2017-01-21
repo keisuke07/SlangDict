@@ -1,0 +1,3 @@
+[submodule "SlangDict/modules/volley"]
+	path = SlangDict/modules/volley
+	url = https://android.googlesource.com/platform/frameworks/volley
