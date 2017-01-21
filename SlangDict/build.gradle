@@ -5,8 +5,13 @@ buildscript {
         jcenter()
     }
     dependencies {
+<<<<<<< HEAD
         classpath 'com.android.tools.build:gradle:2.3.0-beta2'
         classpath 'com.google.gms:google-services:3.0.0'
+=======
+        classpath 'com.android.tools.build:gradle:2.2.3'
+
+>>>>>>> 136f920fd68bcb2ad7614d17446bb5e5a5956811
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -28,7 +33,11 @@ project(':modules:volley') {
             mavenCentral()
         }
         dependencies {
+<<<<<<< HEAD
             classpath 'com.android.tools.build:gradle:2.2.2'
+=======
+            classpath 'com.android.tools.build:gradle:0.12.2'
+>>>>>>> 136f920fd68bcb2ad7614d17446bb5e5a5956811
         }
     }
 }
