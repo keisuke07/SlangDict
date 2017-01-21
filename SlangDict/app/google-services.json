@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "940271027440",
+    "firebase_url": "https://iosproject-d6921.firebaseio.com",
+    "project_id": "iosproject-d6921",
+    "storage_bucket": "iosproject-d6921.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940271027440:android:81e0f4cc9e6be3e0",
+        "android_client_info": {
+          "package_name": "com.example.kei.slangdict"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940271027440-q9tavp5i991aft540slg90m633409tid.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAggYNAkkW3B5Z-TEEBRhNhL3K4Wsg0Ris"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
