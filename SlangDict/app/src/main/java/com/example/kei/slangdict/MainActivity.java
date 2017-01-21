@@ -2,21 +2,43 @@ package com.example.kei.slangdict;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
+import com.example.kei.slangdict.Model.Word;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
+
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FirebaseStorage storage = FirebaseStorage.getInstance();
-        StorageReference storageRef = storage.getReferenceFromUrl("gs://iosproject-d6921.appspot.com");
 
-        StorageReference imagesRef = storageRef.child("images");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("word").child("really");
 
-        StorageReference spaceRef = storageRef.child("images/space.jpg");
+        //Log.d("ASD", mDatabase.child("word").toString());
+
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                Word word = dataSnapshot.getValue(Word.class);
+
+                Log.d("ASD", "Value is: " + word.getMeaning());
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("ASD", "Failed to read value.", error.toException());
+            }
+        });
     }
 }
